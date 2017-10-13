@@ -1,6 +1,33 @@
 # android_veci
 interesting code from around the internet
 
+### Custom Preference layout
+ <PreferenceCategory
+        android:title="@string/wallboard_style"
+        android:layout="@layout/divider_preference">
+        
+<!----layout/divider_preference---->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@drawable/shadow_view" />
+
+    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+android:id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorAccent"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+</LinearLayout>
+
 ### SnapHelper recycler view
 
     void attachSnapHelper(RecyclerView rw) {
