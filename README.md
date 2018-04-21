@@ -66,3 +66,24 @@ interesting code from around the internet
         snapHelper.attachToRecyclerView(rw);
     }
 ```
+
+ ### Linear row 
+ ```xml
+     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp">
+
+        <EditText
+            android:id="@+id/weigh"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="_ _ _" />
+
+        <android.support.v7.widget.AppCompatSpinner
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:entries="@array/spinner_delay" />
+    </LinearLayout>
+```
