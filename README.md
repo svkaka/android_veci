@@ -87,3 +87,16 @@ interesting code from around the internet
             android:entries="@array/spinner_delay" />
     </LinearLayout>
 ```
+
+ ### String plural 
+ ```xml
+       <plurals name="hallo">
+        <item quantity="one">Hallo %s you have %d message</item>
+        <item quantity="other">Hallo %s you have %d messages</item>
+    </plurals>
+ ```
+ 
+  ```java
+ val text = resources.getQuantityString(R.plurals.hallo,
+                count, name, count)
+  ```
