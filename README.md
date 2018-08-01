@@ -100,3 +100,31 @@ interesting code from around the internet
  val text = resources.getQuantityString(R.plurals.hallo,
                 count, name, count)
   ```
+  
+
+   ### String plural 
+ ```xml
+       <plurals name="hallo">
+        <item quantity="one">Hallo %s you have %d message</item>
+        <item quantity="other">Hallo %s you have %d messages</item>
+    </plurals>
+ ```
+ 
+  ```kotlin
+ val text = resources.getQuantityString(R.plurals.hallo,
+                count, name, count)
+  ```
+  
+   ### Formatting with HTML tags (some crazy shit) 
+ ```xml
+<resources>
+  <string name="welcome_messages">Hello, %1$s! You have &lt;b>%2$d new messages&lt;/b>.</string>
+</resources>
+ ```
+ 
+  ```kotlin
+val text = getString(R.string.welcome_messages, username, mailCount)
+val styledText: CharSequence = Html.fromHtml(text)
+// in case of trouble https://developer.android.com/guide/topics/resources/string-resource#StylingWithHTML
+// val escapedUsername = TextUtil.htmlEncode(username)
+  ```
