@@ -107,7 +107,7 @@ interesting code from around the internet
    ### Formatting with HTML tags (some crazy shit) 
  ```xml
 <resources>
- //keep eye on numbers 
+ //we need those numbers next to placeholder in order to set values
   <string name="welcome_messages">Hello, %1$s! You have &lt;b>%2$d new messages&lt;/b> since %3$s.</string>
 </resources>
  ```
