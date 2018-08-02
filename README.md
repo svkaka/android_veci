@@ -88,23 +88,12 @@ interesting code from around the internet
     </LinearLayout>
 ```
 
- ### String plural 
- ```xml
-       <plurals name="hallo">
-        <item quantity="one">Hallo %s you have %d message</item>
-        <item quantity="other">Hallo %s you have %d messages</item>
-    </plurals>
- ```
- 
-  ```java
- val text = resources.getQuantityString(R.plurals.hallo,
-                count, name, count)
-  ```
+
   
 
    ### String plural 
  ```xml
-       <plurals name="hallo">
+    <plurals name="hallo">
         <item quantity="one">Hallo %s you have %d message</item>
         <item quantity="other">Hallo %s you have %d messages</item>
     </plurals>
@@ -118,7 +107,8 @@ interesting code from around the internet
    ### Formatting with HTML tags (some crazy shit) 
  ```xml
 <resources>
-  <string name="welcome_messages">Hello, %1$s! You have &lt;b>%2$d new messages&lt;/b>.</string>
+ //keep eye on numbers 
+  <string name="welcome_messages">Hello, %1$s! You have &lt;b>%2$d new messages&lt;/b> since %3$s.</string>
 </resources>
  ```
  
@@ -127,4 +117,13 @@ val text = getString(R.string.welcome_messages, username, mailCount)
 val styledText: CharSequence = Html.fromHtml(text)
 // in case of trouble https://developer.android.com/guide/topics/resources/string-resource#StylingWithHTML
 // val escapedUsername = TextUtil.htmlEncode(username)
+  ```
+
+
+###Fragment has option menu
+  ```kotlin
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setHasOptionsMenu(true)
+    }
   ```
