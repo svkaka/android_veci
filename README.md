@@ -120,8 +120,9 @@ val styledText: CharSequence = Html.fromHtml(text)
   ```
 
 
-###Fragment has option menu
+### Fragment has option menu
   ```kotlin
+    //If true, the fragment has menu items to contribute.
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setHasOptionsMenu(true)
